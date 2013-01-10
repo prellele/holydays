@@ -1,0 +1,27 @@
+mysql: &mysql
+  adapter: mysql2
+  host: "localhost"
+  port: 3306
+  username: ""
+  password: ""
+#  socket: /tmp/mysql.sock
+  charset: utf8
+  collation: utf8_bin
+
+# Comment the the mysql line and uncomment the postgres line
+# if you want to use postgres
+common: &common
+  # Choose one of the following
+  <<: *mysql
+
+
+# Normally you don't need to touch anything here
+development:
+  <<: *common
+  database: "holyday_db"
+production:
+  <<: *common
+  database: "holyday_db"
+test:
+  <<: *common
+  database: "holyday_test"

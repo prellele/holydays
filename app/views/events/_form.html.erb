@@ -1,0 +1,20 @@
+<%= form_for(@event) do |f| %>
+   <% if @event.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@event.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <ul>
+    <% @event.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.date_select :start_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save', disable_with: 'Saving...' %>
+  </div>
+
+<% end %>
