@@ -8,6 +8,8 @@ Holydays::Application.routes.draw do
       post 'toggle_holiday'
     end
   end
+  
+  resources :log_datas
 
   root :to => "application#redirect"
   

@@ -19,6 +19,9 @@
   margin-left: 20px;
   list-style:none;
 }
+#logs{
+  list-style:none;
+}
 .category-1{
   background-color: green !important;
 }

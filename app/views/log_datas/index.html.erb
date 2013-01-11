@@ -1,0 +1,5 @@
+<ul id="logs">
+<% @logs.each do |log| %>
+  <li><%= log.created_at %>: <%= log.user.username %> <%= log.data %> Urlaub am <%= log.date %></li>
+<% end %>
+</ul>

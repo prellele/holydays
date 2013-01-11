@@ -7,6 +7,7 @@ class EventsController < ApplicationController
     if current_user.events.exists?(:start_at => date)
       @event = current_user.events.where(:start_at => date).first
       @event.destroy
+      LogData.start_logging(current_user, "deleted", date)
       respond_to do |format|
         format.json { head :ok } # IMPROVE: find better status code
       end
@@ -14,10 +15,11 @@ class EventsController < ApplicationController
       @event = Event.new()
       @event.user_id = current_user.id
       @event.start_at = date
-      @event.name = "#{current_user.username} Urlaub"
+      @event.name = "#{current_user.username.titleize} Urlaub"
       @event.end_at = @event.start_at
       @event.all_day = true
       @event.category = Category.where(:name => "Urlaub").first
+      LogData.start_logging(current_user, "created", date)
       respond_to do |format|
         if @event.save
           format.json { head :created }        
