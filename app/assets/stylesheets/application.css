@@ -42,6 +42,14 @@
 .category-2{
   background-color: red !important;
 }
+footer{
+  margin-top: 40px;
+  float:right;
+}
+footer, footer a, footer a:link, footer a:visited{
+    color: #CCCCCC;
+}
+
 #header{
   font-family: verdana, arial, helvetica, sans-serif;
   padding-left:45px;

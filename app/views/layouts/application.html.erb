@@ -7,18 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if user_signed_in? %>
 <ul id="userEvents">
   <%= display_sum_user_events %>
 </ul>
+<% end %>
 
 <div id="header">Urlaubskalender</div>
-<ul id="menu">
-  <li><%= link_to 'Calendar', calendar_path %></li>
-  <li><%= link_to 'Log', log_datas_path %></li>
-  <li><%= link_to 'Logout', destroy_user_session_path, :id => 'logout', :"data-user" => current_user.id %></li>
-</ul>
+<% if user_signed_in? %>
+  <ul id="menu">
+    <li><%= link_to 'Calendar', calendar_path %></li>
+    <li><%= link_to 'Log', log_datas_path %></li>
+    <li><%= link_to 'Logout', destroy_user_session_path, :id => 'logout', :"data-user" => current_user.id %></li>
+  </ul>
+<% end %>
 <div id="void"></div>
+
 <%= yield %>
 
+<footer>
+by Lennart Prelle | <a href="https://github.com/prellele/holydays" target="_blank">Code</a>
+</footer>
 </body>
 </html>
