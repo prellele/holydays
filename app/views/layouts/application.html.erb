@@ -7,7 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<ul id="header">
+  <%= display_sum_user_events %>
+  <li><%= link_to 'Calendar', calendar_path %></li>
+  <li><%= link_to 'Log', log_datas_path %></li>
+  <li><%= link_to 'Logout', destroy_user_session_path %></li>
+</ul>
 
+<h2>Urlaubskalender</h2>
 <%= yield %>
 
 </body>
