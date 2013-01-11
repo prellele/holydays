@@ -11,20 +11,45 @@
  *= require_self
  *= require_tree .
  */
-#header{
+#userEvents{
   float:right;
+  font-family: verdana, arial, helvetica, sans-serif;
+  text-decoration:none;
+  color:#303030;
+  list-style:none;
+  padding-right: 40px;
+  padding-top: 14px;
+  font-size: 13px;
 }
-#header li {
+#menu a {
+  font-family: verdana, arial, helvetica, sans-serif;
+  text-decoration:none;
+  color:#303030;
+  font-weight: bolder;
+  font-size: 13px;
+}
+#menu a:hover {
+  text-decoration: underline;
+}
+#menu li {
   display:inline;
-  margin-left: 20px;
+  margin-left: 28px;
   list-style:none;
 }
 #logs{
   list-style:none;
 }
-.category-1{
-  background-color: green !important;
-}
 .category-2{
   background-color: red !important;
+}
+#header{
+  font-family: verdana, arial, helvetica, sans-serif;
+  padding-left:45px;
+  padding-top:10px;
+  width:200px;
+  font-size: 30px;
+  font-weight:bolder;
+}
+#void{
+  height:20px;
 }

@@ -20,7 +20,7 @@
   line-height: 14px;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #d5d5d5;
+  border-bottom: 1px solid #303030;
 }
 
 /* Month name header & links */
@@ -37,6 +37,16 @@
 
 .ec-month-nav {
 
+}
+
+.ec-month-nav a {
+  text-decoration:none;
+  color:#000000;
+}
+
+.ec-month-nav a:hover {
+  text-decoration:underline;
+  color:#000000;
 }
 
 /* Containers */
@@ -70,7 +80,7 @@
   width: 100%;
   background: white;
   overflow: hidden;
-  border-right: 1px solid #d5d5d5;
+  border-right: 1px solid #303030;
 }
 
 .ec-row {
@@ -91,11 +101,11 @@
 }
 
 .ec-day-bg {
-  border-left: 1px solid #d5d5d5;
+  border-left: 1px solid #303030;
 }
 
 .ec-today-bg {
-  background-color: #ffffdd;
+  background-color: #c0c0c0;
 }
 
 .ec-row-table {
@@ -110,10 +120,10 @@
   text-align: right;
   padding: 0 5px;
   line-height: 16px;
-  border-top: 1px solid #d5d5d5;
-  border-left: 1px solid #d5d5d5;
-  border-bottom: 1px dotted #bbbbbb;
-  background-color: #ecede2;
+  border-top: 1px solid #303030;
+  border-left: 1px solid #303030;
+  border-bottom: 1px dotted #303030;
+  background-color: #cfd7d9;
   overflow: hidden;
 }
 
@@ -122,20 +132,19 @@ a.ec-day-link {
 }
 
 .ec-today-header {
-  background-color: #d7d7ba;
+  background-color: #c0c0c0;
 }
 
 .ec-weekend-day-header {
-  
+  background-color:#5e5e5e;
+  color:white;
 }
 
 .ec-other-month-header {
-  background-color: #efefef;
-  color: #777;
 }
 
 .ec-other-month-bg {
-  
+  background-color:#efefef;
 }
 
 
