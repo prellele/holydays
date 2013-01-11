@@ -11,7 +11,7 @@ Holydays::Application.routes.draw do
   
   resources :log_datas
 
-  root :to => "application#redirect"
+  root :to => "calendar#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
