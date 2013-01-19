@@ -1,0 +1,90 @@
+body {
+    padding-top: 10%;
+    background: none repeat scroll 0% 0% rgb(241, 241, 241);
+    margin: 0px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: rgb(51, 51, 51);
+}
+.new_user {
+	background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+
+    width: 304px;
+    position: relative;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto;
+    padding: 20px;
+    background: none repeat scroll 0% 0% white;
+}
+.new_user .login {
+    margin-bottom: 0px;
+    background-color: rgb(241, 241, 241);
+    font-size: 16px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 14px 10px;
+    width: 280px;
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    color: rgb(85, 85, 85);
+}
+
+.new_user .submit{
+	margin-top: 10px;
+}
+.new_user .submit input{
+	background: none repeat scroll 0% 0% rgb(42, 121, 163);
+	color: rgb(255, 255, 255);
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+	border-color: rgb(42, 121, 163);
+}
+
+div.right {
+	float: right !important;
+}
+div.right a{
+	color: rgb(71, 77, 87);
+	background-image: linear-gradient(rgb(241, 241, 241), rgb(241, 241, 241) 25%, rgb(230, 230, 230));
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	text-decoration: none;
+	outline: medium none;
+	margin-top: -50px;
+}
+a,a:link,a:visited{
+	color: rgb(42, 121, 163);
+	text-decoration: none;
+	outline: medium none;
+	margin-top: -50px
+}
+
+.btn {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    line-height: 18px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+    background-image: -moz-linear-gradient(center top , rgb(255, 255, 255), rgb(230, 230, 230));
+    background-repeat: repeat-x;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(179, 179, 179);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+}

@@ -5,6 +5,9 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <%= yield :header %>
+  
 </head>
 <body>
 <% if user_signed_in? %>
@@ -13,20 +16,17 @@
 </ul>
 <% end %>
 
-<div id="header">Urlaubskalender</div>
 <% if user_signed_in? %>
+<div id="header">Urlaubskalender</div>
   <ul id="menu">
     <li><%= link_to 'Calendar', calendar_path %></li>
     <li><%= link_to 'Log', log_datas_path %></li>
-    <li><%= link_to 'Logout', destroy_user_session_path, :id => 'logout', :"data-user" => current_user.id %></li>
+    <li><%= link_to 'Logout', destroy_user_session_path, :id => 'logout', :"data-user" => current_user.id, :method => "delete" %></li>
   </ul>
 <% end %>
 <div id="void"></div>
 
 <%= yield %>
 
-<footer>
-by Lennart Prelle | <a href="https://github.com/prellele/holydays" target="_blank">Code</a>
-</footer>
 </body>
 </html>
