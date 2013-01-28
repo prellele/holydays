@@ -1,1 +1,16 @@
-== holydays
+=== holydays
+a simple webapp to manage vacation, e.g. in a company. You could sign up and see 
+when your employees listed their vacation or create your own vacation by simply 
+clicking on a day-header.
+
+Sign in
+![sign in](https://mydi.sk/public.php?service=files&t=ff7f8b74ae0f304a2b6c12edf9a45ade)
+
+Sign up
+![sign up](https://mydi.sk/public.php?service=files&t=73f3e5fd69e6175091b6fe31dd5b055b)
+
+calendar
+![calendar](https://mydi.sk/public.php?service=files&t=c6937e6c5789582d226ff816feaa63a0)
+
+log
+![log](https://mydi.sk/public.php?service=files&t=926fbebf88b9b364ca719c207d523700)
