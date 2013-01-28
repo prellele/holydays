@@ -1,16 +1,18 @@
-=== holydays
+== holydays
 a simple webapp to manage vacation, e.g. in a company. You could sign up and see 
 when your employees listed their vacation or create your own vacation by simply 
 clicking on a day-header.
 
-Sign in
-![sign in](https://mydi.sk/public.php?service=files&t=ff7f8b74ae0f304a2b6c12edf9a45ade)
+=== some screenshots 
 
-Sign up
-![sign up](https://mydi.sk/public.php?service=files&t=73f3e5fd69e6175091b6fe31dd5b055b)
+==== /users/sign_in 
+http://prellele.de/holydays/sign_in_small.png
 
-calendar
-![calendar](https://mydi.sk/public.php?service=files&t=c6937e6c5789582d226ff816feaa63a0)
+==== /users/sign_up 
+http://prellele.de/holydays/sign_up_small.png
 
-log
-![log](https://mydi.sk/public.php?service=files&t=926fbebf88b9b364ca719c207d523700)
+==== /calendar
+http://prellele.de/holydays/calendar_small.png
+
+==== /log_datas
+http://prellele.de/holydays/log_small.png
