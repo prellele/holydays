@@ -1,7 +1,12 @@
 == holydays
 a simple webapp to manage vacation, e.g. in a company. You could sign up and see 
 when your employees listed their vacation or create your own vacation by simply 
-clicking on a day-header.
+clicking on a day-header. Every toggle of a day is logged in a table and could be 
+displayed by every user.
+
+==== load all german holidays in you db
+    bundle exec rake db:load_german_holidays
+
 
 === some screenshots 
 
