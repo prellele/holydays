@@ -5,18 +5,18 @@
 <div class="container">
 	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 	
-		<h2>Sign in</h2>
+		<h2><%= t('sign_in')%></h2>
 	
-		<%= f.text_field :username, :class => "login", :placeholder => "Username" %><br />
-		<%= f.password_field :password, :class => "login", :placeholder => "Password" %>
+		<%= f.text_field :username, :class => "login", :placeholder => t('username') %><br />
+		<%= f.password_field :password, :class => "login", :placeholder => t('password') %>
 
 		<% if devise_mapping.rememberable? -%>
-		  <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+		  <div><%= f.check_box :remember_me %> <%= f.label t('remember_me') %></div>
 		<% end -%>
 
-		<div class="submit"><%= f.submit "Sign in", :class => "btn" %></div>
+		<div class="submit"><%= f.submit t('sign_in'), :class => "btn" %></div>
 		<div class="right"> 
-			<%= link_to "Forgot your password?", new_password_path(resource_name), :class => "btn" %><br />
+			<%= link_to t('forgot_password'), new_password_path(resource_name), :class => "btn" %><br />
 		</div>
 	<% end %>
 	
@@ -25,5 +25,3 @@
 	</center>
 	
 </div>
-  <br />
-
