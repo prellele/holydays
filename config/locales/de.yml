@@ -1,0 +1,16 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+de:
+  sign_in: "Einloggen"
+  sign_in: "Registrieren"
+  forgot_password: "Passwort vergessen?"
+  code: "Code"
+  username: "Username"
+  password: "Passwort"
+  password_confirmation: "Passwort wiederholen"
+  remember_me: "angemelet bleiben"
+  email: "E-Mail"
+  reset_instructions: "Anleitung zum Passwort zurücksetzen senden"
+  calendar:
+    vacation_calendar: "Urlaubskalender"

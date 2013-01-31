@@ -3,5 +3,15 @@
 
 en:
   sign_in: "Sign in"
+  sign_in: "Sign up"
+  forgot_password: "Forgot your password?"
+  code: "Code"
+  username: "Username"
+  password: "Password"
+  password_confirmation: "Password confirmation"
+  remember_me: "remember me"
+  email: "Email"
+  reset_instructions: "Send me reset password instructions"
   calendar:
     vacation_calendar: "Vacation Calendar"
+	
