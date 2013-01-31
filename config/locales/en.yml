@@ -4,6 +4,7 @@
 en:
   sign_in: "Sign in"
   sign_up: "Sign up"
+  logout: "Logout"
   forgot_password: "Forgot your password?"
   code: "Code"
   username: "Username"
@@ -12,5 +13,7 @@ en:
   remember_me: "remember me"
   email: "Email"
   reset_instructions: "Send me reset password instructions"
-  calendar:
-    vacation_calendar: "Vacation Calendar"
+  vacation_calendar: "Vacation Calendar"
+  calendar: "Calender"
+  log: "Log"
+  used_days: "Used Vacationdays"

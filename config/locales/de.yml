@@ -4,6 +4,7 @@
 de:
   sign_in: "Einloggen"
   sign_up: "Registrieren"
+  logout: "Ausloggen"
   forgot_password: "Passwort vergessen?"
   code: "Code"
   username: "Username"
@@ -11,6 +12,8 @@ de:
   password_confirmation: "Passwort wiederholen"
   remember_me: "angemelet bleiben"
   email: "E-Mail"
-  reset_instructions: "Anleitung zum Passwort zurÃ¼cksetzen senden"
-  calendar:
-    vacation_calendar: "Urlaubskalender"
+  reset_instructions: "Anleitung zum Passwort zurücksetzen senden"
+  vacation_calendar: "Urlaubskalender"
+  calendar: "Kalender"
+  log: "Log"
+  used_days: "Benutzte Urlaubstage"
