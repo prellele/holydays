@@ -7,6 +7,8 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'sqlite3'
 
+
+gem 'rails-i18n'
 gem 'mysql2'
 gem 'devise'
 gem 'event-calendar', :require => 'event_calendar', :git => 'git://github.com/prellele/event_calendar.git'
