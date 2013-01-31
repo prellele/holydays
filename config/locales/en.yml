@@ -3,7 +3,7 @@
 
 en:
   sign_in: "Sign in"
-  sign_in: "Sign up"
+  sign_up: "Sign up"
   forgot_password: "Forgot your password?"
   code: "Code"
   username: "Username"

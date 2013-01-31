@@ -3,7 +3,7 @@
 
 de:
   sign_in: "Einloggen"
-  sign_in: "Registrieren"
+  sign_up: "Registrieren"
   forgot_password: "Passwort vergessen?"
   code: "Code"
   username: "Username"
