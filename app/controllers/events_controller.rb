@@ -5,11 +5,19 @@ class EventsController < ApplicationController
     # IMPROVE: Could not pass params[] to create, duplicated code 
     date = "#{params[:event]["start_at(1i)"]}-#{params[:event]["start_at(2i)"]}-#{params[:event]["start_at(3i)"]}"
     if current_user.events.exists?(:start_at => date)
-      @event = current_user.events.where(:start_at => date).first
-      @event.destroy
-      LogData.start_logging(current_user, "deleted", date)
-      respond_to do |format|
-        format.json { head :ok } # IMPROVE: find better status code
+      if date.to_date < Date.today
+        respond_to do |format|
+          flash[:error] = "Datum liegt in der Vergangenheit"
+          format.json { head :ok }
+        end
+      else
+        @event = current_user.events.where(:start_at => date).first
+        @event.destroy
+        LogData.start_logging(current_user, "deleted", date)
+        respond_to do |format|
+          flash[:warning] = "Urlaub am #{date} entfernt"
+          format.json { head :ok } # IMPROVE: find better status code
+        end
       end
     else 
       @event = Event.new()

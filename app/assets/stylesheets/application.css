@@ -11,6 +11,9 @@
  *= require_self
  *= require bootstrap_and_overrides
  */
+body{
+  padding-top:50px;
+}
 #userEvents{
   float:right;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -63,11 +66,11 @@ footer, footer a, footer a:link, footer a:visited{
 }
 
 .flash{
-  width: 230px; 
+  width: 250px; 
   position: fixed;
   left: 50%; 
-  top: 20px;
-  margin-left:-115px;
+  top: 10px;
+  margin-left:-125px;
 }
 
 
