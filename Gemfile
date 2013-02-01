@@ -7,7 +7,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'sqlite3'
 
-
+gem 'haml'
 gem 'rails-i18n'
 gem 'mysql2'
 gem 'devise'
@@ -15,6 +15,7 @@ gem 'event-calendar', :require => 'event_calendar', :git => 'git://github.com/pr
 gem 'thin'
 gem 'holidays'
 gem 'whenever', :require => false
+gem 'twitter-bootstrap-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -22,7 +22,8 @@ class EventsController < ApplicationController
       LogData.start_logging(current_user, "created", date)
       respond_to do |format|
         if @event.save
-          format.json { head :created }        
+          flash[:notice] = "Urlaub am #{date} erstellt"
+          format.json { head :created }
         end
       end
     end

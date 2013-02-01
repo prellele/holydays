@@ -7,9 +7,9 @@
 		<h2><%= t('sign_up') %></h2>
 
 		<%= f.text_field :username, :class => "login", :placeholder => t('username') %>
-		<%= f.email_field :email, :class => "login", :placeholder => t('email') %>
 		<%= f.password_field :password, :class => "login", :placeholder => t('password') %>
 		<%= f.password_field :password_confirmation, :class => "login", :placeholder => t('password_confirmation') %>
+                <%= f.email_field :email, :class => "login", :placeholder => t('email') %>
 
 		<div class="submit"><%= f.submit t('sign_up'), :class => "btn" %></div>
 	<% end %>

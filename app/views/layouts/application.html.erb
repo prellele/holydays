@@ -8,8 +8,25 @@
   
   <%= yield :header %>
   <%= favicon_link_tag %>  
+
+<script type="text/javascript" >
+$(document).ready(function(){
+   setTimeout(function(){
+  $(".alert").fadeOut(1500, function () {
+  $(".alert").remove();
+      });
+
+}, 2000);
+ });
+
+</script>
+
 </head>
 <body>
+
+<div class="flash">
+  <%= bootstrap_flash %>
+</div>
 <% if user_signed_in? %>
 <ul id="userEvents">
   <%= display_sum_user_events %>

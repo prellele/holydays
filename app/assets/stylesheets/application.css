@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap_and_overrides
  */
 #userEvents{
   float:right;
@@ -60,3 +61,13 @@ footer, footer a, footer a:link, footer a:visited{
 #void{
   height:20px;
 }
+
+.flash{
+  width: 230px; 
+  position: fixed;
+  left: 50%; 
+  top: 20px;
+  margin-left:-115px;
+}
+
+
