@@ -10,7 +10,7 @@ de:
   username: "Username"
   password: "Passwort"
   password_confirmation: "Passwort wiederholen"
-  remember_me: "angemelet bleiben"
+  remember_me: "angemeldet bleiben"
   email: "E-Mail"
   reset_instructions: "Anleitung zum Passwort zurücksetzen senden"
   vacation_calendar: "Urlaubskalender"
