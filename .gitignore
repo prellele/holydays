@@ -12,6 +12,7 @@
 
 # Ignore all configs
 /config/*.yml
+/config/mail.rb
 
 # Ignore all logfiles and tempfiles.
 /log

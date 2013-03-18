@@ -1,9 +1,22 @@
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-  :address              => "smtp.server.local",
-  :port                 => 587,
-  :domain               => '<yourdomain.com>',
-  :user_name            => '<username>',
-  :password             => '<password>',
-  :authentication       => 'plain',
-  :enable_starttls_auto => true  }
+# config/application.yml
+defaults: &defaults
+  host: "yourdomain.com"
+  mail:
+    sender_address: "mail@yourdomain.com"
+    smtp:
+      host: "smtp.yourdomain.com"
+      port: 25
+      domain: "smtp.yourdomain.com"
+      username: "username"
+      password: 'secret'
+      authentication: 'plain'
+      enable_starttls_auto: true
+          
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
