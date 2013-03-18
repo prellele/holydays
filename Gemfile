@@ -27,4 +27,4 @@ gem 'holidays'
 gem 'whenever', :require => false
 
 # server
-gem 'thin'
+gem 'unicorn'
