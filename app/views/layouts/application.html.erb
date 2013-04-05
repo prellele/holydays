@@ -3,7 +3,8 @@
 <head>
   <title>Holydays</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "application", "chardinjs" %>
+  <%= javascript_include_tag "application", "chardinjs.min" %>
   <%= csrf_meta_tags %>
   
   <%= yield :header %>
@@ -25,11 +26,8 @@ $(document).ready(function(){
 </div>
 <% if user_signed_in? %>
 <ul id="userEvents">
-  <%= display_sum_user_events %>
+  <li data-intro="<%= t("intro.used_holidays") %>" data-position="left" ><%= display_sum_user_events %></li>
 </ul>
-<% end %>
-
-<% if user_signed_in? %>
 <div id="header"><%= t :vacation_calendar %></div>
   <ul id="menu">
     <li><%= link_to t('calendar'), calendar_path %></li>

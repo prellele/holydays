@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def display_sum_user_events
-    "<li><b>Benutzte Urlaubstage</b>: #{current_user.events.length} </li>".html_safe
+    "<b>Benutzte Urlaubstage</b>: #{current_user.events.length}".html_safe
   end
 
   def twitterized_type(type)

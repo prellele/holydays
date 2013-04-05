@@ -14,14 +14,3 @@ $(document).ready(function(){
   });    
 
 });
-
-$.fn.styleOwnHolidays = function() {
-    var userid = document.getElementById("Logout").data("user");
-    alert(userid);
-    alert($(this).data("user"));
-    if ($(this).data("user") == userid)
-    {
-      $(this).css("background-color", "green")
-    }
-};
-

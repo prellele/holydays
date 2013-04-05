@@ -17,3 +17,6 @@ en:
   calendar: "Calender"
   log: "Log"
   used_days: "Used Vacationdays"
+  intro:
+    day_header: "By clicking on the day-header you toggle the holyday. With the first click, the holyday is created, the secound one deletes it."
+    used_holidays: "Sum of used holydays this year"

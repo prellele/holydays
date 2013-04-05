@@ -1,4 +1,20 @@
-<!-- Probably move the stylesheet to you layout. Also make sure you include the javascript. -->
-<%= stylesheet_link_tag "event_calendar" %>
+<% content_for :header do %>
+	<%= stylesheet_link_tag "event_calendar" %>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#help').click(function(){
+				$('body').chardinJs('start');
+  			});
+		  	$('.ec-today-header').each(function(){
+	    		$(this).attr("data-intro", "<%= t("intro.day_header")%>");
+	    		$(this).attr("data-position", "bottom");
+	  		});
+		});
+	</script>
+<% end %>
 
 <%= raw(event_calendar) %>
+
+<div id="help">
+	<a href="#" class="btn btn-large primary" data-toggle="chardinjs">Help!</a>
+</div>

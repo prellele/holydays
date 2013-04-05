@@ -17,3 +17,6 @@ de:
   calendar: "Kalender"
   log: "Log"
   used_days: "Benutzte Urlaubstage"
+  intro:
+    day_header: "Um einen Urlaubstag einzutragen genügt ein klick auf den Kopf des Tages. Erneutes klicken löscht diesesn Urlaubstag wieder."
+    used_holidays: "Summe aller verwendenten Urlaubstage dieses Jahr"
