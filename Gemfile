@@ -15,6 +15,7 @@ gem 'sass-rails',   '~> 3.2.3'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'therubyracer', :platforms => :ruby
 gem 'jquery-rails'
+gem 'bootstrap-flashmessage', '0.0.1'
 
 gem 'json', '1.7.7'
 
