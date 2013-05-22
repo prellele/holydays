@@ -12,20 +12,20 @@ gem 'haml', '4.0.3'
 gem 'rails-i18n', '0.7.3'
 gem 'twitter-bootstrap-rails', '2.2.6'
 gem 'sass-rails',   '3.2.6'
-gem 'coffee-rails', '3.2.3'
-gem 'therubyracer', '0.11.3', :platforms => :ruby
+gem 'coffee-rails', '3.2.2'
+gem 'therubyracer', '0.11.4', :platforms => :ruby
 gem 'jquery-rails', '2.2.1'
 gem 'bootstrap-flashmessage', '0.0.1'
 
-gem 'json', '1.7.7'
+gem 'json', '1.8.0'
 
 # auth
-gem 'devise', '2.1.3'
+gem 'devise', '2.2.4'
 
 # calendar
 gem 'event-calendar', :require => 'event_calendar', :git => 'git://github.com/prellele/event_calendar.git'
 gem 'holidays', '1.0.5'
-gem 'whenever', :require => false
+gem 'whenever', '0.8.2', :require => false
 
 # server
 gem 'unicorn', '4.6.2'
