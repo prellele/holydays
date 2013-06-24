@@ -13,7 +13,7 @@ gem 'rails-i18n', '0.7.3'
 gem 'haml', '4.0.3'
 gem 'twitter-bootstrap-rails', '2.2.6'
 gem 'jquery-rails', '2.2.1'
-gem 'bootstrap-flashmessage', '0.0.1'
+gem 'bootstrap-flashmessage', '0.0.2'
 
 group :assets do
   gem 'sass-rails', '3.2.6'
@@ -24,7 +24,6 @@ group :assets do
 
   gem 'uglifier', '2.1.1'
 end
-
 
 gem 'json', '1.8.0'
 
