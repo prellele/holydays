@@ -1,7 +1,7 @@
 class Category < ActiveRecord::Base
+  attr_accessible :id, :name, :color
   
-  attr_accessible :id, :name
-  
-  has_many :events
+  has_many :event
 
+  validates_uniqueness_of :name
 end

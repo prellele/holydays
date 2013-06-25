@@ -10,6 +10,7 @@ Holydays::Application.routes.draw do
   end
   
   resources :log_datas
+  resources :categories
 
   root :to => "calendar#index"
   

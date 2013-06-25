@@ -1,40 +1,8 @@
 class EventsController < ApplicationController
   before_filter :authenticate_user!
   
-  def toggle_holiday
-    # IMPROVE: Could not pass params[] to create, duplicated code 
-    date = "#{params[:event]["start_at(1i)"]}-#{params[:event]["start_at(2i)"]}-#{params[:event]["start_at(3i)"]}"
-    if current_user.events.exists?(:start_at => date)
-      if date.to_date < Date.today
-        respond_to do |format|
-          flash[:error] = "Datum liegt in der Vergangenheit"
-          format.json { head :ok }
-        end
-      else
-        @event = current_user.events.where(:start_at => date).first
-        @event.destroy
-        LogData.start_logging(current_user, "deleted", date)
-        respond_to do |format|
-          flash[:warning] = "Urlaub am #{date} entfernt"
-          format.json { head :ok } # IMPROVE: find better status code
-        end
-      end
-    else 
-      @event = Event.new()
-      @event.user_id = current_user.id
-      @event.start_at = date
-      @event.name = "#{current_user.username.titleize} Urlaub"
-      @event.end_at = @event.start_at
-      @event.all_day = true
-      @event.category = Category.where(:name => "Urlaub").first
-      LogData.start_logging(current_user, "created", date)
-      respond_to do |format|
-        if @event.save
-          flash[:notice] = "Urlaub am #{date} erstellt"
-          format.json { head :created }
-        end
-      end
-    end
+  def show
+    @event = Event.find(params[:id])
   end
   
   def new
@@ -51,6 +19,8 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
+        LogData.start_logging(current_user, "created", @event.start_at)
+        format.html { redirect_to(root_path, :notice => 'event created') }
         format.json { head :created }
       else
         format.json { head :no_content }
@@ -60,6 +30,7 @@ class EventsController < ApplicationController
   
   def edit
     @event = Event.find(params[:id])
+    @categories = Category.all
   end
   
   def update
@@ -67,6 +38,7 @@ class EventsController < ApplicationController
    
     respond_to do |format|
       if @event.update_attributes(params[:event])
+        LogData.start_logging(current_user, "updated", @event.start_at)
         format.html  { redirect_to(list_events_path, :notice => 'event was successfully updated.') }
         format.json  { head :no_content }
       else
@@ -81,6 +53,7 @@ class EventsController < ApplicationController
     @event.destroy
    
     respond_to do |format|
+      LogData.start_logging(current_user, "destroyed", @event.start_at)
       format.html { redirect_to(root_path, :notice => 'event deleted') }
       format.json { head :no_content }
     end

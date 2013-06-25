@@ -6,8 +6,8 @@ class CreateEventsCategories < ActiveRecord::Migration
       t.timestamps
     end
     
-    Category.create :name => 'Urlaub'
-    Category.create :name => 'Feiertag'
+    Category.create :name => 'Urlaub', :color => '#FFFF00'
+    Category.create :name => 'Feiertag', :color => '#FF0000'
     
     create_table :events do |t|
       t.string :name

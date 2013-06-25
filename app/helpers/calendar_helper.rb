@@ -21,7 +21,7 @@ module CalendarHelper
     calendar event_calendar_opts do |args|
       event, day = args[:event], args[:day]
       html = display_event_time(event, day)
-      html << %(#{h(event.name)})
+      html << %(#{h(event.description)})
       html
     end
   end

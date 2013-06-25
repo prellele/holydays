@@ -9,6 +9,16 @@
 	    		$(this).attr("data-intro", "<%= t("intro.day_header")%>");
 	    		$(this).attr("data-position", "bottom");
 	  		});
+
+			<% Category.all.each do |cat| %>
+				$('.category-<%= cat.id %>').each(function() {
+			      $(this).css("background-color", "<%= cat.color %>")
+			    }); 
+			<% end %>
+
+		    $('.user-<%= current_user.id %>').each(function() {
+	          $(this).addClass( "striped angled" );
+		    }); 
 		});
 	</script>
 <% end %>
@@ -18,3 +28,14 @@
 <div id="help">
 	<a href="#" class="btn btn-large primary" data-toggle="chardinjs">Help!</a>
 </div>
+
+<div class="modal hide" id="addEventDialog">
+ 	<div class="modal-header">
+    	<button class="close" data-dismiss="modal">×</button>
+    	<h3>Create Event</h3>
+  	</div>
+    <div class="modal-body">
+    	<%= render 'events/form' %>
+    </div>
+</div>
+

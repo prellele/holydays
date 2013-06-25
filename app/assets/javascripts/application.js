@@ -14,4 +14,11 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap-flashmessage
+//= require jquery-minicolors
 //= require_tree .
+
+$(document).ready(function(){
+  $('.minicolors').minicolors({
+    theme: 'bootstrap'
+  });
+});

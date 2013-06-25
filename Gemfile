@@ -14,6 +14,7 @@ gem 'haml', '4.0.3'
 gem 'twitter-bootstrap-rails', '2.2.6'
 gem 'jquery-rails', '2.2.1'
 gem 'bootstrap-flashmessage', '0.0.2'
+gem 'jquery-minicolors-rails'
 
 group :assets do
   gem 'sass-rails', '3.2.6'
