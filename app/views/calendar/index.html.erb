@@ -2,9 +2,6 @@
 	<%= stylesheet_link_tag "event_calendar" %>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('#help').click(function(){
-				$('body').chardinJs('start');
-  			});
 		  	$('.ec-today-header').each(function(){
 	    		$(this).attr("data-intro", "<%= t("intro.day_header")%>");
 	    		$(this).attr("data-position", "bottom");
@@ -25,8 +22,9 @@
 
 <%= raw(event_calendar) %>
 
+
 <div id="help">
-	<a href="#" class="btn btn-large primary" data-toggle="chardinjs">Help!</a>
+	<a href="#addEventDialog" role="button" class="btn btn-large btn-primary" data-toggle="modal">Create Event</a>
 </div>
 
 <div class="modal hide" id="addEventDialog">
