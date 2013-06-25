@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
   has_event_calendar
 
   def description
-  	(name || "#{self.user.username} #{self.category.name}" )
+  	(name || "#{self.user.username} #{self.category.name}".titleize )
   end
 
 end
