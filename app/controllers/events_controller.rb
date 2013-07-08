@@ -39,7 +39,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       if @event.update_attributes(params[:event])
         LogData.start_logging(current_user, "updated", @event.start_at)
-        format.html  { redirect_to(list_events_path, :notice => 'event was successfully updated.') }
+        format.html  { redirect_to(root_path, :notice => 'event was successfully updated.') }
         format.json  { head :no_content }
       else
         format.html  { render :action => "edit" }
