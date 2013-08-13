@@ -1,0 +1,48 @@
+#!/bin/sh
+RETVAL=0
+
+start() {
+        echo starting
+        echo `unicorn -p 3000 >/dev/null 2>&1` &
+}
+
+stop() {
+        echo `ps aux | grep unicorn | grep -v grep | awk -F " "  '{ print $2}' | xargs kill`
+}
+
+update() {
+        echo pulling from github
+        #git pull origin master
+        echo installing gems
+        bundle install
+        echo migrating db
+        RAILS_ENV=production bundle exec rake db:migrate
+        echo bundle exec rake assets:precompile
+        RAILS_ENV=production bundle exec rake assets:clean assets:precompile
+}
+
+case "$1" in
+   start)
+      start
+      ;;
+   stop)
+      stop
+      ;;
+   restart)
+      stop
+      start
+      ;;
+   update)
+      update
+      stop
+      start
+      ;;
+   justupdate)
+      update
+      ;;
+   *)
+      echo $"Usage: holydays { start | stop | restart | update | justupdate }"
+      RETVAL=3
+esac
+
+exit $RETVAL
