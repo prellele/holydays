@@ -11,19 +11,19 @@
   <% end %>
       <div class="control-group">
         <%= f.label 'start_at' %>
-          <div class="controls">
-              <%= f.date_select :start_at %>
+          <div class="controls startdate">
+              <%= f.date_select :start_at, {:class => 'date-select'} %>
         </div>
       </div>
       <div class="control-group">
         <%= f.label 'end_at' %>
           <div class="controls">
-              <%= f.date_select :end_at %>
+              <%= f.date_select :end_at, {:class => 'date-select'} %>
         </div>
       </div>
       <div class="control-group">
         <%= f.label 'category' %>
-          <div class="controls">
+          <div class="controls enddate">
               <%= f.select :category_id, options_from_collection_for_select(@categories, "id", "name") %>
         </div>
       </div>

@@ -76,13 +76,10 @@ h1.header{
   float:right;
 }
 .new_event select{
-   background: transparent;
-   width: 70px;
+   width: auto;
    padding: 5px;
    font-size: 16px;
    line-height: 1;
-   border: 0;
-   border-radius: 0;
    height: 34px;
 }
 
