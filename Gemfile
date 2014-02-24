@@ -1,18 +1,18 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.17'
 gem 'settingslogic', '2.0.9'
 
 # db
-gem 'mysql2', '0.3.11'
+gem 'mysql2', '0.3.15'
 
 # i18n
-gem 'rails-i18n', '0.7.3'
+gem 'rails-i18n', '0.7.4'
 
 # view
 gem 'haml', '4.0.3'
-gem 'twitter-bootstrap-rails', '2.2.6'
-gem 'jquery-rails', '2.2.1'
+gem 'twitter-bootstrap-rails', '2.2.8'
+gem 'jquery-rails', '3.1.0'
 gem 'bootstrap-flashmessage', '0.0.2'
 gem 'jquery-minicolors-rails'
 
@@ -29,7 +29,7 @@ end
 gem 'json', '1.8.0'
 
 # auth
-gem 'devise', '2.2.4'
+gem 'devise', '3.2.3'
 
 # calendar
 gem 'event-calendar', :require => 'event_calendar', :git => 'git://github.com/prellele/event_calendar.git'
